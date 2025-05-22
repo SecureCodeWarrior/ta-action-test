@@ -14,6 +14,7 @@ jobs:
         uses: SecureCodeWarrior/ta-action-test@main
         with:
           who-to-greet: 'Dora the Explorer'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
